@@ -2,7 +2,6 @@ import React from "react";
 import { useMediaQuery } from "react-responsive";
 import "./ProductImage.css";
 import Tilt from "react-parallax-tilt";
-import ReactImageMagnify from "react-image-magnify";
 
 export const ProductImage = ({ selectedProduct }) => {
   const isDesktopOrLaptop = useMediaQuery({
@@ -20,7 +19,7 @@ export const ProductImage = ({ selectedProduct }) => {
     >
       {isDesktopOrLaptop ? (
         <div>
-          <ReactImageMagnify
+          {/* <ReactImageMagnify
             smallImage={{
               alt: "Small Image",
               src: selectedProduct?.img,
@@ -41,7 +40,15 @@ export const ProductImage = ({ selectedProduct }) => {
               maxHeight: "100%",
               objectFit: "contain",
             }}
-          />
+          /> */}
+          <Tilt
+            tiltEnable={true}
+            scale={1.05}
+            transitionSpeed={1000}
+            className="product-details-image"
+          >
+            <img src={selectedProduct?.img} alt="drip" />
+          </Tilt>
         </div>
       ) : (
         <Tilt

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import "./WishlistImage.css";
 import Tilt from "react-parallax-tilt";
-import ReactImageMagnify from "react-image-magnify";
 import { MdDelete } from "react-icons/md";
 
 export const WishlistImage = ({ selectedProduct, setCheck, check }) => {
@@ -45,7 +44,7 @@ export const WishlistImage = ({ selectedProduct, setCheck, check }) => {
             onClick={() => removeFromCartHandler(selectedProduct?._id)}
           />
           {/* </div> */}
-          <ReactImageMagnify
+          {/* <ReactImageMagnify
             smallImage={{
               alt: "Small Image",
               src: selectedProduct?.img,
@@ -65,8 +64,16 @@ export const WishlistImage = ({ selectedProduct, setCheck, check }) => {
               maxWidth: "100%",
               maxHeight: "100%",
               objectFit: "contain",
-            }}
-          />
+            }} */}
+          {/* /> */}
+          <Tilt
+            tiltEnable={true}
+            scale={1.05}
+            transitionSpeed={1000}
+            className="product-details-image"
+          >
+            <img src={selectedProduct?.img} alt="drip" />
+          </Tilt>
         </div>
       ) : (
         <Tilt
