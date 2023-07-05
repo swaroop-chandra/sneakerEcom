@@ -1,0 +1,241 @@
+.dropdown-container {
+    position: relative;
+  }
+  
+  .notification-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+  }
+  
+  .notification-icon {
+    font-size: 24px;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .dropdown-item {
+    margin-bottom: 8px;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .modal-content {
+    background-color: #ffffff;
+    color: #000000;
+    overflow-x: scroll;
+    overflow-wrap: break-word;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .notification-list {
+    margin-top: 1rem;
+  }
+  
+  /* .notification-item {
+    margin-bottom: 1rem;
+  } */
+  .notification-item {
+    margin-bottom: 1rem;
+   
+  }
+  
+  
+  @media (max-width: 600px) {
+    .modal-content {
+      max-width: 90%;
+    }
+  
+    .close {
+      top: 20px;
+      right: 20px;
+      font-size: 32px;
+    }
+  }
+
+
+/* .button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+.button {
+  --border-right: 4px;
+  border-left: 13px;;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #509072;
+  --fs-size: 1em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+} 
+ */
+ .button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+.button {
+  --border-right: 4px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #509072;
+  --fs-size: 1em;
+  letter-spacing: 5px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  -webkit-text-stroke: 1px var(--animation-color);
+  animation: animation-loop 3s infinite;
+}
+
+/* @keyframes animation-loop {
+  0% {
+    width: 0%;
+  }
+  20% {
+    width: 20%;
+    
+  }
+
+  40%{
+    width: 60%;
+   
+  }
+  60%{
+    width: 80%;
+   
+  }
+  80%{
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color));
+  }
+  100% {
+    width: 0%;
+  }
+} */
+@keyframes animation-loop {
+  0% {
+    width: 0%;
+  }
+  12.5% {
+    width: 25%;
+  }
+  25% {
+    width: 50%;
+  }
+  37.5% {
+    width: 75%;
+  }
+  50% {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color));
+  }
+  62.5% {
+    width: 75%;
+  }
+   75% {
+    width: 50%;
+  }
+  87.5% {
+    width: 25%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
